@@ -195,7 +195,7 @@ nav {
 .contai {
     width: 100%;
     height: 100vh;
-    background-image: url(/asset/wp.jpg);
+    background-image: url(asset/wp.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     justify-content: center;
@@ -657,7 +657,7 @@ button {
     text-align: center;
     padding: 150px;
     justify-content: center;
-    background-image: url(/asset/ssvg.svg);
+    background-image: url(asset/ssvg.svg);
 
 
 
@@ -939,7 +939,7 @@ p {
     }
 
     .contai {
-        background-image: url(/asset/wp1.jpg);
+        background-image: url(asset/wp1.jpg);
         height: 70vh;
 
     }
