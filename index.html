@@ -33,7 +33,10 @@
     <!---====================================-->
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <!---==============ANIMASI SCROLL============================================-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 
 <body>
@@ -57,17 +60,17 @@
         </div>
         <ul class="nav-links">
             <div class="frame">
-                <a href="#" class="custom-btn btn-3"><span>Home </span></a>
+                <a href="#1" class="custom-btn btn-3"><span>Home </span></a>
             </div>
             <div class="frame">
-                <a href="#" class="custom-btn btn-3"><span>About </span></a>
+                <a href="#2" class="custom-btn btn-3"><span>About </span></a>
             </div>
             <div class="frame">
-                <a href="#" class="custom-btn btn-3"><span>Produk </span></a>
+                <a href="#3" class="custom-btn btn-3"><span>Produk </span></a>
             </div>
 
             <div class="frame">
-                <a href="#" class="custom-btn btn-3"><span>Contact </span></a>
+                <a href="#4" class="custom-btn btn-3"><span>Contact </span></a>
             </div>
 
         </ul>
@@ -78,8 +81,8 @@
     <!---===========================CONTEN 1=======================----->
     <!---===========================CONTEN 1=======================----->
 
-    <div class="contai">
-        <div class="txte">
+    <div class="contai " id="1">
+        <div class="txte" data-aos="fade-up">
             <h1>BUY AND SELL NFT</h1>
             <p>Explore the NFT marketplace for digital art, collectible, virtual word PFP's
                 and more</p>
@@ -168,7 +171,7 @@
     </div>
 
     <div class="halaman3">
-        <div class="kata">
+        <div class="kata" data-aos="zoom-in">
             <h1 style="color: #fff;">Collections.
                 Next Level.</h1>
             <p style="color: #fff;">Discover new collection pages with rich storytelling, featured items, and more.</p>
@@ -190,12 +193,12 @@
     <!---====================HALAMAN 4========================================================================-->
 
 
-    <div class="halaman4">
+    <div class="halaman4" id="2">
 
         <h1 style="color: violet;">ABOUT</h1>
         <br>
         <div class="row">
-            <div class="col text-justify">
+            <div class="col text-justify" data-aos="fade-right">
                 <p>NFT (Non-Fungible Token) adalah representasi digital unik dari aset atau karya seni yang menggunakan
                     teknologi blockchain untuk memberikan keaslian dan kepemilikan. NFT mencatat informasi khusus yang
                     membedakan satu aset digital dari yang lain, membuatnya tak dapat dipertukarkan.
@@ -203,7 +206,7 @@
                     Sementara itu, Metaverse adalah ruang virtual yang menggabungkan dunia fisik dan digital,
                     menciptakan lingkungan interaktif di internet.</p>
             </div>
-            <div class="col text-justify">
+            <div class="col text-justify" data-aos="fade-left">
                 <p>Di dalamnya, pengguna dapat berinteraksi dengan elemen digital dan orang lain. Keduanya saling
                     terkait karena NFT dapat menjadi elemen penting dalam Metaverse, memberikan kepemilikan dan keunikan
                     pada aset digital yang dapat digunakan atau ditampilkan dalam lingkungan virtual. Ini menciptakan
@@ -215,19 +218,216 @@
     </div>
 
 
+
+
+
+    <style>
+        .load {
+            display: flex;
+        }
+
+        .loader {
+            --path: #fff;
+            --dot: red;
+            --duration: 3s;
+            width: 44px;
+            height: 44px;
+            position: relative;
+        }
+
+        .loader:before {
+            content: '';
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            position: absolute;
+            display: block;
+            background: var(--dot);
+            top: 37px;
+            left: 19px;
+            transform: translate(-18px, -18px);
+            animation: dotRect var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+        }
+
+        .loader svg {
+            display: block;
+            width: 100%;
+            height: 100%;
+        }
+
+        .loader svg rect,
+        .loader svg polygon,
+        .loader svg circle {
+            fill: none;
+            stroke: var(--path);
+            stroke-width: 10px;
+            stroke-linejoin: round;
+            stroke-linecap: round;
+        }
+
+        .loader svg polygon {
+            stroke-dasharray: 145 76 145 76;
+            stroke-dashoffset: 0;
+            animation: pathTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+        }
+
+        .loader svg rect {
+            stroke-dasharray: 192 64 192 64;
+            stroke-dashoffset: 0;
+            animation: pathRect 3s cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+        }
+
+        .loader svg circle {
+            stroke-dasharray: 150 50 150 50;
+            stroke-dashoffset: 75;
+            animation: pathCircle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+        }
+
+        .loader.triangle {
+            width: 48px;
+        }
+
+        .loader.triangle:before {
+            left: 21px;
+            transform: translate(-10px, -18px);
+            animation: dotTriangle var(--duration) cubic-bezier(0.785, 0.135, 0.15, 0.86) infinite;
+        }
+
+        @keyframes pathTriangle {
+            33% {
+                stroke-dashoffset: 74;
+            }
+
+            66% {
+                stroke-dashoffset: 147;
+            }
+
+            100% {
+                stroke-dashoffset: 221;
+            }
+        }
+
+        @keyframes dotTriangle {
+            33% {
+                transform: translate(0, 0);
+            }
+
+            66% {
+                transform: translate(10px, -18px);
+            }
+
+            100% {
+                transform: translate(-10px, -18px);
+            }
+        }
+
+        @keyframes pathRect {
+            25% {
+                stroke-dashoffset: 64;
+            }
+
+            50% {
+                stroke-dashoffset: 128;
+            }
+
+            75% {
+                stroke-dashoffset: 192;
+            }
+
+            100% {
+                stroke-dashoffset: 256;
+            }
+        }
+
+        @keyframes dotRect {
+            25% {
+                transform: translate(0, 0);
+            }
+
+            50% {
+                transform: translate(18px, -18px);
+            }
+
+            75% {
+                transform: translate(0, -36px);
+            }
+
+            100% {
+                transform: translate(-18px, -18px);
+            }
+        }
+
+        @keyframes pathCircle {
+            25% {
+                stroke-dashoffset: 125;
+            }
+
+            50% {
+                stroke-dashoffset: 175;
+            }
+
+            75% {
+                stroke-dashoffset: 225;
+            }
+
+            100% {
+                stroke-dashoffset: 275;
+            }
+        }
+
+        .loader {
+            display: inline-block;
+            margin: 0 16px;
+        }
+
+        .ll {
+            width: 100%;
+            justify-content: space-between;
+            display: flex;
+            margin-bottom: 25px;
+        }
+    </style>
+
+
     <!---====================HALAMAN 5========================================================================-->
     <!---====================HALAMAN 5========================================================================-->
     <!---====================HALAMAN 5========================================================================-->
 
 
-    <div class="w">
+    <div class="w" id="3">
 
 
 
-        <h1 style="color: #fff; font-size: 50px; margin-bottom: 10px;">Explore</h1>
+
+        <div class="ll">
+            <h1 style="color: #fff; font-size: 40px; ">Explore</h1>
+            <div class="load">
+                <div class="loader">
+                    <svg viewBox="0 0 80 80">
+                        <circle r="32" cy="40" cx="40" id="test"></circle>
+                    </svg>
+                </div>
+
+                <div class="loader triangle">
+                    <svg viewBox="0 0 86 80">
+                        <polygon points="43 8 79 72 7 72"></polygon>
+                    </svg>
+                </div>
+
+                <div class="loader">
+                    <svg viewBox="0 0 80 80">
+                        <rect height="64" width="64" y="8" x="8"></rect>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+
+
+
         <div class="halaman5 small item">
             <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
-                class="produk">
+                class="produk" data-aos="zoom-in">
                 <img
                     src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?w=740&t=st=1701343755~exp=1701344355~hmac=c0a869db28f5bd23060a9dec324635e5d6b8aa3f83d3aa5737d4b8084948c47b">
                 <h4>NFT CYBERPUNK</h4>
@@ -236,7 +436,8 @@
                 <h5>Rp.2000.000</h5>
             </a>
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="100"><img
                     src="https://img.freepik.com/free-vector/flat-design-thug-life-sunglasses-illustration_23-2150209328.jpg?w=740&t=st=1701344726~exp=1701345326~hmac=2a839effa83d0929f375d4144a198ab4148e54444a5ea3a56909c3425409a3eb">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -246,7 +447,8 @@
             </a>
 
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="200"><img
                     src="https://images-platform.99static.com/dMcrzd7txDOC_RGGptYikySZWvs=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/133/133059/attachment_133059650">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -256,7 +458,7 @@
 
 
             <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
-                class="produk">
+                class="produk" data-aos="zoom-in" data-aos-delay="300">
                 <img
                     src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?w=740&t=st=1701343755~exp=1701344355~hmac=c0a869db28f5bd23060a9dec324635e5d6b8aa3f83d3aa5737d4b8084948c47b">
                 <h4>NFT CYBERPUNK</h4>
@@ -265,7 +467,8 @@
                 <h5>Rp.2000.000</h5>
             </a>
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="400"><img
                     src="https://img.freepik.com/free-vector/flat-design-thug-life-sunglasses-illustration_23-2150209328.jpg?w=740&t=st=1701344726~exp=1701345326~hmac=2a839effa83d0929f375d4144a198ab4148e54444a5ea3a56909c3425409a3eb">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -275,7 +478,8 @@
             </a>
 
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in"><img
                     src="https://images-platform.99static.com/dMcrzd7txDOC_RGGptYikySZWvs=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/133/133059/attachment_133059650">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -283,7 +487,7 @@
                 <h5>Rp.2000.000</h5>
             </a>
             <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
-                class="produk">
+                class="produk" data-aos="zoom-in" data-aos-delay="100">
                 <img
                     src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?w=740&t=st=1701343755~exp=1701344355~hmac=c0a869db28f5bd23060a9dec324635e5d6b8aa3f83d3aa5737d4b8084948c47b">
                 <h4>NFT CYBERPUNK</h4>
@@ -292,7 +496,8 @@
                 <h5>Rp.2000.000</h5>
             </a>
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="200"><img
                     src="https://img.freepik.com/free-vector/flat-design-thug-life-sunglasses-illustration_23-2150209328.jpg?w=740&t=st=1701344726~exp=1701345326~hmac=2a839effa83d0929f375d4144a198ab4148e54444a5ea3a56909c3425409a3eb">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -302,7 +507,8 @@
             </a>
 
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="300"><img
                     src="https://images-platform.99static.com/dMcrzd7txDOC_RGGptYikySZWvs=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/133/133059/attachment_133059650">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -310,7 +516,7 @@
                 <h5>Rp.2000.000</h5>
             </a>
             <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
-                class="produk">
+                class="produk" data-aos="zoom-in" data-aos-delay="400">
                 <img
                     src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?w=740&t=st=1701343755~exp=1701344355~hmac=c0a869db28f5bd23060a9dec324635e5d6b8aa3f83d3aa5737d4b8084948c47b">
                 <h4>NFT CYBERPUNK</h4>
@@ -319,7 +525,8 @@
                 <h5>Rp.2000.000</h5>
             </a>
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in"><img
                     src="https://img.freepik.com/free-vector/flat-design-thug-life-sunglasses-illustration_23-2150209328.jpg?w=740&t=st=1701344726~exp=1701345326~hmac=2a839effa83d0929f375d4144a198ab4148e54444a5ea3a56909c3425409a3eb">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -329,7 +536,8 @@
             </a>
 
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="100"><img
                     src="https://images-platform.99static.com/dMcrzd7txDOC_RGGptYikySZWvs=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/133/133059/attachment_133059650">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -337,7 +545,7 @@
                 <h5>Rp.2000.000</h5>
             </a>
             <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
-                class="produk">
+                class="produk" data-aos="zoom-in" data-aos-delay="200">
                 <img
                     src="https://img.freepik.com/free-vector/hand-drawn-nft-style-ape-illustration_23-2149622021.jpg?w=740&t=st=1701343755~exp=1701344355~hmac=c0a869db28f5bd23060a9dec324635e5d6b8aa3f83d3aa5737d4b8084948c47b">
                 <h4>NFT CYBERPUNK</h4>
@@ -346,7 +554,8 @@
                 <h5>Rp.2000.000</h5>
             </a>
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="300"><img
                     src="https://img.freepik.com/free-vector/flat-design-thug-life-sunglasses-illustration_23-2150209328.jpg?w=740&t=st=1701344726~exp=1701345326~hmac=2a839effa83d0929f375d4144a198ab4148e54444a5ea3a56909c3425409a3eb">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -356,7 +565,8 @@
             </a>
 
 
-            <a href="#" class="produk"><img
+            <a href="https://api.whatsapp.com/send/?phone=6281353538346&text&type=phone_number&app_absent=0"
+                class="produk" data-aos="zoom-in" data-aos-delay="400"><img
                     src="https://images-platform.99static.com/dMcrzd7txDOC_RGGptYikySZWvs=/0x0:2000x2000/500x500/top/smart/99designs-contests-attachments/133/133059/attachment_133059650">
                 <h4>NFT CYBERPUNK</h4>
                 <p>ORA DI DOL PAK</p>
@@ -370,16 +580,18 @@
 
 
 
-    <div class="trr">
+    <div class="trr" id="4">
 
         <div class="sosmed">
 
-            <a href="#"><span>Facebook</span></a>
-            <a href="#"><span>Twitter</span></a>
-            <a href="#"><span>Google+</span></a>
-            <a href="#"><span>Github</span></a>
-            <a href="#"><span>Dribbble</span></a>
-            <a href="#"><span>CodePen</span></a>
+            <a href="https://www.instagram.com/farizaladha?igshid=YmMyMTA2M2Y%3D"
+                data-aos="fade-up"><span>Facebook</span></a>
+            <a href="https://www.instagram.com/farizaladha?igshid=YmMyMTA2M2Y%3D" data-aos="fade-up"
+                data-aos-delay="200"><span>Twitter</span></a>
+            <a href="https://www.instagram.com/farizaladha?igshid=YmMyMTA2M2Y%3D" data-aos="fade-up"
+                data-aos-delay="300"><span>Google+</span></a>
+            <a href="https://github.com/FarizalA" data-aos="fade-up" data-aos-delay="400"><span>Github</span></a>
+
         </div>
     </div>
 
@@ -388,7 +600,7 @@
         .trr {
 
 
-            background-color: #131439;
+            height: 150px;
             align-items: center;
             justify-content: center;
 
@@ -401,10 +613,7 @@
             width: 70%;
             margin: auto;
             text-align: center;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-            padding-top: 10px;
-            padding-bottom: 10px;
+
         }
 
 
@@ -486,15 +695,20 @@
         .sosmed a:nth-of-type(4):before {
             content: '\f113';
         }
-
-        .sosmed a:nth-of-type(5):before {
-            content: '\f17d';
-        }
-
-        .sosmed a:nth-of-type(6):before {
-            content: '\f1cb';
-        }
     </style>
+    <div class="qqq">
+        <h1 style="color: #9656a1; font-size: 40px; margin-bottom: 40px;">Contact Form</h1><br>
+        <form action="/action_page.php"><label for="fname">First Name</label><input type="text" id="fname"
+                name="firstname" placeholder="Your name.."><label for="lname">Last Name</label><input type="text"
+                id="lname" name="lastname" placeholder="Your last name.."><label for="country">Country</label><select
+                id="country" name="country">
+                <option value="australia">Australia</option>
+                <option value="canada">Canada</option>
+                <option value="usa">USA</option>
+            </select><label for="subject">Subject</label><textarea id="subject" name="subject"
+                placeholder="Write something.." style="height:200px"></textarea><input type="submit" value="Submit">
+        </form>
+    </div>
 
 
 
@@ -504,10 +718,26 @@
 
 
 
+
+
+    <div class="footer">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path fill="#361060" fill-opacity="1"
+                d="M0,96L40,96C80,96,160,96,240,90.7C320,85,400,75,480,106.7C560,139,640,213,720,224C800,235,880,181,960,165.3C1040,149,1120,171,1200,165.3C1280,160,1360,128,1400,112L1440,96L1440,320L1400,320C1360,320,1280,320,1200,320C1120,320,1040,320,960,320C880,320,800,320,720,320C640,320,560,320,480,320C400,320,320,320,240,320C160,320,80,320,40,320L0,320Z">
+            </path>
+        </svg>
+        <div class="kartu">
+            <h1>Farizal Adha</h1>
+            <p>Thanks For Everything</p>
+        </div>
+    </div>
 
 
     <script src="main.js"></script>
-
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 
 </html>
