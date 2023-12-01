@@ -339,9 +339,7 @@ a:hover {
     outline: none;
 }
 
-a:hover {
-    color: #e73700;
-}
+a:hover {}
 
 h2 {
     margin-bottom: 48px;
@@ -761,7 +759,20 @@ p {
     .produk {
         width: 120px;
         height: 180px;
+        transition: ease 0.5s;
     }
+
+    .produk:hover {
+        width: 125px;
+        height: 185px;
+        box-shadow: 10px 10px 50px #03bed6,
+            -10px -10px 50px #03ffff;
+    }
+
+
+
+
+
 }
 
 
@@ -783,10 +794,16 @@ p {
         width: 90px;
         height: 150px;
         margin-left: 0;
-
+        transition: ease 0.5s;
     }
 
 
+    .produk:hover {
+        width: 95px;
+        height: 155px;
+        box-shadow: 10px 10px 50px #03bed6,
+            -10px -10px 50px #03ffff;
+    }
 
 
     .produk h4,
