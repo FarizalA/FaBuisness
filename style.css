@@ -666,14 +666,17 @@ button {
 
 
 .row {
-
+    overflow: hidden;
     display: flex;
     gap: 30px;
 }
 
-.col {}
+.col {
+    overflow: hidden;
+}
 
 .col p {
+    overflow: hidden;
     color: #fff;
     font-size: 20px;
     text-align: justify;
@@ -711,8 +714,17 @@ button {
     border-radius: 10px;
     height: 290px;
     color: #ffffff;
-
+    transition: ease 0.5s;
 }
+
+.produk:hover {
+    width: 210px;
+    height: 300px;
+    box-shadow: 10px 10px 50px #03bed6,
+        -10px -10px 50px #03ffff;
+}
+
+
 
 .produk h4,
 h5,
@@ -754,6 +766,11 @@ p {
 
 
 @media (max-width:450px) {
+
+    .load {
+        overflow: hidden;
+    }
+
     .w {
         padding: 30px;
     }
@@ -770,6 +787,8 @@ p {
     }
 
 
+
+
     .produk h4,
     h5,
     p {
@@ -781,6 +800,83 @@ p {
         font-size: 7px;
     }
 
+}
+
+
+
+
+
+
+
+/*===================CONTACT================================*/
+
+
+input[type=text],
+select,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+
+}
+
+input[type=submit] {
+    background-color: #9656a1;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover {
+    background-color: #C780FA;
+}
+
+.qqq {
+    width: 500px;
+    justify-content: left;
+    color: #f2f2f2;
+    padding: 120px;
+}
+
+.qqq h1 {
+    color: #9656a1;
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+.footer {
+    margin-top: 90px;
+    height: 150px;
+    background-color: #361060;
+}
+
+.footer svg {
+    margin-top: -200px;
+}
+
+
+
+
+
+/*---footer----======*/
+
+.kartu {
+    width: 100%;
+    color: blueviolet;
+    height: 70px;
+    margin-top: -80px;
+}
+
+.kartu h1,
+p {
+    margin-left: 20px;
 }
 
 
@@ -830,7 +926,58 @@ p {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width: 768px) {
+    body {}
+
     nav {
         position: fixed;
         z-index: 1;
@@ -997,11 +1144,30 @@ p {
 
 
 
+    .qqq {
+        width: auto;
+
+        padding: 20px;
+    }
+
+    .qqq h1 {
+        margin-bottom: 0;
+        font-size: 20px;
+    }
 
 
+    .footer {
+        width: 100%;
+    }
 
+    .footer svg {
+        margin-top: -100px;
+        width: ;
+    }
 
-
+    .kartu {
+        margin-top: 0;
+    }
 
 
 
